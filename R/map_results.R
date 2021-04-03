@@ -74,9 +74,6 @@ No se detecto acceso a internet. Por favor chequear la conexion.")
   }
 
 
-
-
-
   # DATA INPUT
 
   election_district <- if(unique(data$category == "presi")){
@@ -163,26 +160,48 @@ No se detecto acceso a internet. Por favor chequear la conexion.")
 
   # IMPORT MAPS CONDITIONAL
 
-  if(unique(data$category) == "presi"){
+ if(unique(data$category) == "presi"){
 
     # ARG MAP
 
-    url_arg <- "https://github.com/electorArg/PolAr_Data/raw/master/geo/provincias.geojson"
 
-    ## FAIL SAFELEY
+    # Set default value for try()
 
-    check <- httr::GET(url_arg)
+    default <- NULL
 
-    httr::stop_for_status(x = check,
-                          task = "Fail to download data. Source is not available // La fuente de datos no esta disponible")
+    df <- base::suppressWarnings(base::try(default <- geoAr::get_geo(geo = "ARGENTINA", level = "provincia") %>%
+                                             geoAr::add_geo_codes(),
+                                           silent = TRUE))
+
+  } else {
+
+    # Set default value for try()
+
+    default <- NULL
+
+    df <- base::suppressWarnings(base::try(default <- geoAr::get_geo(geo = "ARGENTINA", level = "departamento") %>%
+                                             geoAr::add_geo_codes(),
+                                           silent = TRUE))
+
+  }
+
+
+    # Fail Safeley
+
+    if(is.null(default)){
+
+      df <- base::message("Fail to download data. Source is not available // La fuente de datos no esta disponible")
+
+    } else {
+
+    map <- df
+
+    }
 
 
 
 
-
-    map <-   sf::read_sf(url_arg)
-
-
+  if(unique(data$category) == "presi"){
 
 
     # PRESIDENTIAL ELECTION
@@ -216,7 +235,7 @@ No se detecto acceso a internet. Por favor chequear la conexion.")
       ggplot2::labs(fill = "",
                     title = glue::glue("Elecci\u00F3n a {election_category} - {election_round} {election_date}"),
                     subtitle = "Puntos Porcentuales de Diferencia",
-                    caption = "Fuente: polAr - Pol\u00EDtica Argentina usando R - https://electorarg.github.io/polAr")
+                    caption = "Fuente: polAr - Pol\u00EDtica Argentina usando R - https://github.com/politicaargentina")
 
 
     # SUBSET MAP
@@ -244,31 +263,18 @@ No se detecto acceso a internet. Por favor chequear la conexion.")
                          x = 0.6, y = 0.5)
 
 
-  }else{
+  } else {
 
     # PROVs MAPs
 
-    ## FAIL SAFELEY
-
-    url_prov <- "https://github.com/electorArg/PolAr_Data/raw/master/geo/departamentos.geojson"
-
-    check <- httr::GET(url_prov)
-
-    httr::stop_for_status(x = check,
-                          task = "Fail to download data. Source is not available // La fuente de datos no esta disponible")
-
-
-
-    map <-  sf::read_sf(url_prov) %>%
-      dplyr::rename(coddepto = coddept) %>%
-      dplyr::select(-depto)
 
 
     if (unique(data$name_prov) == "BUENOS AIRES"){
 
       pba <- data %>%
         dplyr::left_join(map, by = c("codprov", "coddepto")) %>%
-        dplyr::ungroup() %>%            sf::st_as_sf()  %>%
+        dplyr::ungroup() %>%
+        sf::st_as_sf()  %>%
         ggplot2::ggplot() +
         ggplot2::geom_sf(ggplot2::aes(fill = group))  +
         ggplot2::geom_rect(xmin = -59, xmax = -58, ymin = -34, ymax = -35,
@@ -294,7 +300,7 @@ No se detecto acceso a internet. Por favor chequear la conexion.")
         ggplot2::labs(fill = "",
                       title = glue::glue("Elecci\u00F3n a {election_category} por {election_district} - {election_round} {election_date}"),
                       subtitle = "Puntos Porcentuales de Diferencia",
-                      caption = "Fuente: polAr - Pol\u00EDtica Argentina usando R - https://electorarg.github.io/polAr")
+                      caption = "Fuente: polAr - Pol\u00EDtica Argentina usando R - https://github.com/politicaargentina")
 
 
       # SUBSET MAP
@@ -332,7 +338,8 @@ No se detecto acceso a internet. Por favor chequear la conexion.")
 
       data %>%
         dplyr::left_join(map, by = c("codprov", "coddepto")) %>%
-        dplyr::ungroup() %>%            sf::st_as_sf()  %>%
+        dplyr::ungroup() %>%
+        sf::st_as_sf()  %>%
         ggplot2::ggplot() +
         ggplot2::geom_sf(ggplot2::aes(fill =  group)) +
         ggthemes::theme_map() +
@@ -356,7 +363,7 @@ No se detecto acceso a internet. Por favor chequear la conexion.")
         ggplot2::labs(fill = "",
                       title = glue::glue("Elecci\u00F3n a {election_category} por {election_district} - {election_round} {election_date}"),
                       subtitle = "Puntos Porcentuales de Diferencia",
-                      caption = "Fuente: polAr - Pol\u00EDtica Argentina usando R - https://electorarg.github.io/polAr")
+                      caption = "Fuente: polAr - Pol\u00EDtica Argentina usando R - https://github.com/politicaargentina")
 
 
     } # Close  provs != PBA if condition
