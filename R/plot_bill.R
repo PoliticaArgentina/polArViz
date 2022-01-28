@@ -1,15 +1,15 @@
-#' Visualizar resultado de una votación (Plot Vote)
+#' Visualizar resultado de una votación (Plot voto)
 #'
 #'@description
 #' Función que grafica el resultado de una votación.
 #'
-#'@param id Parametro en el que se especifica el id del proyecto obtenido con \code{\link{show_available_bills}}
+#'@param id Parametro en el que se especifica el id del proyecto obtenido con \code{\link{legislAr::show_available_bills}}
 #'
 #' @examples
 #'
 #' plot_bill(id = "1926-Diputados")
 #'
-#' @seealso  \code{\link{get_bill_votes}, \link{show_available_bills}}
+#' @seealso  \code{\link{legislAr::get_bill_votos}, \link{legislAr::show_available_bills}}
 #'
 #' @export
 
@@ -19,16 +19,19 @@ plot_bill <- function(id = NULL){
   bill <-   legislAr::get_bill_votes(bill = id) %>%
     dplyr::mutate(id = id)
 
-  bill_metadata <- legislAr::show_available_bills(viewer = FALSE) %>%
+  chamber <- dplyr::case_when(stringr::str_detect(string = id, pattern = "DIP") ~ "diputados",
+                              TRUE ~ "senadores")
+
+  bill_metadata <- legislAr::show_available_bills(viewer = FALSE, chamber = chamber) %>%
     dplyr::filter(id == unique(bill$id))
 
-  vote_count <-  bill %>%
-    dplyr::count(vote)
+  voto_count <-  bill %>%
+    dplyr::count(voto)
 
 
-  vote <- tibble::tibble(vote = c("AFIRMATIVO", "AUSENTE", "NEGATIVO",
+  voto <- tibble::tibble(voto = c("AFIRMATIVO", "AUSENTE", "NEGATIVO",
                                   "PRESIDENTE", "ABSTENCION")) %>%
-    dplyr::left_join(vote_count, by = "vote") %>%
+    dplyr::left_join(voto_count, by = "voto") %>%
     dplyr::mutate(n = ifelse(is.na(n), 0, n))
 
 
@@ -36,9 +39,9 @@ plot_bill <- function(id = NULL){
     house = dplyr::case_when(
       dim(bill)[1] == 257 ~ "Diputados",
       dim(bill)[1] == 72 ~ "Senadores"),
-    party_long = c(vote$vote[1],vote$vote[2], vote$vote[3], vote$vote[4], vote$vote[5]),
+    party_long = c(voto$voto[1],voto$voto[2], voto$voto[3], voto$voto[4], voto$voto[5]),
     party_short = c("afirmativo", "ausente", "negativo", "presidente", "abstencion"),
-    seats = c(vote$n[1],vote$n[2], vote$n[3],  vote$n[4], vote$n[5])
+    seats = c(voto$n[1],voto$n[2], voto$n[3],  voto$n[4], voto$n[5])
   )
 
   bill_df <- bill_df %>%
@@ -81,16 +84,15 @@ plot_bill <- function(id = NULL){
     ) +
     ggplot2::labs(title = paste0("<b>", unique(bill_df$house), "</b><br>
                                <span style = 'font-size:10pt'> ",
-                                 bill_metadata$descripcion , "</span>")) +
+                                 bill_metadata$description , "</span>")) +
     ggplot2::theme(
       plot.title.position = "plot",
       plot.title = ggtext::element_textbox_simple(
         size = 13,
         lineheight = 1,
-        padding = ggplot2::margin(5.5, 5.5, 5.5, 5.5),
-        margin = ggplot2::margin(0, 0, 5.5, 0),
-        fill = "azure1"
-      ))
+       # padding = ggplot2::margin(5.5, 5.5, 5.5, 5.5),
+       # margin = ggplot2::margin(0, 0, 5.5, 0),
+        fill = "lightgrey"))
 
 
 
