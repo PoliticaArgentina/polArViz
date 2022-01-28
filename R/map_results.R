@@ -235,7 +235,7 @@ No se detecto acceso a internet. Por favor chequear la conexion.")
       ggplot2::labs(fill = "",
                     title = glue::glue("Elecci\u00F3n a {election_category} - {election_round} {election_date}"),
                     subtitle = "Puntos Porcentuales de Diferencia",
-                    caption = "Fuente: polAr - Pol\u00EDtica Argentina usando R - https://github.com/politicaargentina")
+                    caption = "Fuente: {electorAr} - https://github.com/politicaargentina")
 
 
     # SUBSET MAP
@@ -300,7 +300,7 @@ No se detecto acceso a internet. Por favor chequear la conexion.")
         ggplot2::labs(fill = "",
                       title = glue::glue("Elecci\u00F3n a {election_category} por {election_district} - {election_round} {election_date}"),
                       subtitle = "Puntos Porcentuales de Diferencia",
-                      caption = "Fuente: polAr - Pol\u00EDtica Argentina usando R - https://github.com/politicaargentina")
+                      caption = "Fuente: {electorAr} - https://github.com/politicaargentina")
 
 
       # SUBSET MAP
@@ -363,7 +363,7 @@ No se detecto acceso a internet. Por favor chequear la conexion.")
         ggplot2::labs(fill = "",
                       title = glue::glue("Elecci\u00F3n a {election_category} por {election_district} - {election_round} {election_date}"),
                       subtitle = "Puntos Porcentuales de Diferencia",
-                      caption = "Fuente: polAr - Pol\u00EDtica Argentina usando R - https://github.com/politicaargentina")
+                      caption = "Fuente: {electorAr} - https://github.com/politicaargentina")
 
 
     } # Close  provs != PBA if condition
