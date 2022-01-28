@@ -9,7 +9,7 @@ plot_speech(data)
 }
 \arguments{
 \item{data}{requiere un discurso dentro data.frame con formato \emph{tidy} descargado con \code{get_speech}
-\emph{(a tidy data.frame with the speech downloaded with \code{get_speech} is required}).}
+\emph{(a tidy data.frame with the speech downloaded with \code{discursAr::get_speech} is required}).}
 }
 \value{
 Devuelve un objeto con clases \code{"wordcloud2" "htmlwidget"} que representa gráficamente el contenido de un discurso presidencial

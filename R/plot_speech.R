@@ -6,7 +6,7 @@
 #'  (\emph{Function that plots a word cloud of presidential specches, with word sizes as a function of its frequency in the data set})
 #'
 #' @param data requiere un discurso dentro data.frame con formato \emph{tidy} descargado con \code{get_speech}
-#' \emph{(a tidy data.frame with the speech downloaded with \code{get_speech} is required}).
+#' \emph{(a tidy data.frame with the speech downloaded with \code{discursAr::get_speech} is required}).
 #'
 #' @return Devuelve un objeto con clases \code{"wordcloud2" "htmlwidget"} que representa gráficamente el contenido de un discurso presidencial
 #'  (\emph{it retruns an object of \code{classes "wordcloud2" "htmlwidget"}} with a graphical representation of presidential speeches).

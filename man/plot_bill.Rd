@@ -2,21 +2,21 @@
 % Please edit documentation in R/plot_bill.R
 \name{plot_bill}
 \alias{plot_bill}
-\title{Visualizar resultado de una votación (Plot Vote)}
+\title{Visualizar resultado de una votación (Plot voto)}
 \usage{
 plot_bill(id = NULL)
 }
 \arguments{
-\item{id}{Parametro en el que se especifica el id del proyecto obtenido con \code{\link{show_available_bills}}}
+\item{id}{Parametro en el que se especifica el id del proyecto obtenido con \code{legislAr::show_available_bills}}
 }
 \description{
 Función que grafica el resultado de una votación.
 }
 \examples{
 
-plot_bill(id = "1926-Diputados")
+polArViz::plot_bill(id = "244-DIPUTADOS")
 
 }
 \seealso{
-\code{\link{get_bill_votes}, \link{show_available_bills}}
+\code{\link[legislAr]{show_available_bills}}, \code{\link[legislAr]{get_bill_votes}}
 }

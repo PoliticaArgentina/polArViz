@@ -3,13 +3,13 @@
 #'@description
 #' Función que grafica el resultado de una votación.
 #'
-#'@param id Parametro en el que se especifica el id del proyecto obtenido con \code{\link{legislAr::show_available_bills}}
+#'@param id Parametro en el que se especifica el id del proyecto obtenido con \code{legislAr::show_available_bills}
 #'
 #' @examples
 #'
-#' plot_bill(id = "1926-Diputados")
+#' polArViz::plot_bill(id = "244-DIPUTADOS")
 #'
-#' @seealso  \code{\link{legislAr::get_bill_votos}, \link{legislAr::show_available_bills}}
+#' @seealso \code{\link[legislAr]{show_available_bills}}, \code{\link[legislAr]{get_bill_votes}}
 #'
 #' @export
 

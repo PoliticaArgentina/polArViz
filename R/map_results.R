@@ -4,20 +4,20 @@
 #' Función para mapear resultados de la elección
 #'  (\emph{Function to map election results})
 #'
-#' @param data un tibble guardado como objeto en el Enviroment luego de consultar \code{\link{get_election_data}} con parámetro
+#' @param data un tibble guardado como objeto en el Enviroment luego de consultar \code{\link[electorAr]{get_election_data}} con parámetro
 #'  \code{level} en \code{provincia} para elecciones presidenciales y \code{level} en \code{departamento} para legislativas
-#'  (\emph{tibble saved as an object in the Enviroment after querying \code{\link{get_election_data}}} with \code{provincia} as
+#'  (\emph{tibble saved as an object in the Enviroment after querying \code{\link[electorAr]{get_election_data}}} with \code{provincia} as
 #'  \code{level} parameter for presidential elections and \code{departmanto} for legislative elections).
 #'  #'
 #' @details \strong{REQUISITOS:}
 #'
 #' @details \strong{1}. El formato de \code{data} debe ser \code{long} para poder graficar. Si \code{data} es \emph{wide} se puede
-#'  transformar con \code{\link{make_long}}
+#'  transformar con \code{\link[electorAr]{make_long}}
 #'  (\emph{\code{long} format of \code{data} is required for plotting results. If \code{data} is in \emph{wide} format you can transform
-#'  it with \code{\link{make_long}}})
+#'  it with \code{\link[electorAr]{make_long}}})
 #'
-#' @details \strong{2.} \code{data} tiene que haber incorporando los nombres de las listas. Agreguelos con \code{\link{get_names}}
-#'  (\emph{\code{data} must have party names. Add them with \code{\link{get_names}}})
+#' @details \strong{2.} \code{data} tiene que haber incorporando los nombres de las listas. Agreguelos con \code{electorAr::get_names}
+#'  (\emph{\code{data} must have party names. Add them with \code{electorAr::get_names}})
 #'
 #' @return Devuelve un objeto de \code{class"gg" "ggplot"} que mapea el resultado de una eleccion condicional al nivel de agregacion de data
 #'  (\emph{Returns an object of \code{class "gg" "ggplot"} that plots the election results in a map conditional on the level of \code{data} aggregation.}).

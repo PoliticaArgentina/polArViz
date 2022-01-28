@@ -7,9 +7,9 @@
 tabulate_results(data, LaTeX = F)
 }
 \arguments{
-\item{data}{un tibble guardado como objeto en el enviroment luego de consultar \code{\link{get_election_data}} con parámetro
+\item{data}{un tibble guardado como objeto en el enviroment luego de consultar \code{\link[electorAr]{get_election_data}} con parámetro
 \code{level} en \code{provincia}
-(\emph{A tibble saved as an object in the enviroment after querying \code{\link{get_election_data}} with \code{provincia} as
+(\emph{A tibble saved as an object in the enviroment after querying \code{\link[electorAr]{get_election_data}} with \code{provincia} as
 \code{level} parameter}).}
 
 \item{LaTeX}{parámetro para obtener código \code{LaTeX} de la tabla de salida.
@@ -30,16 +30,16 @@ Función para tabular resultados de la elección
 \strong{REQUISITOS:}
 
 \strong{1}. El formato de \code{data} debe ser \code{long} para calcular resultados.
-Si \code{data} es \emph{wide} se puede transformar con \code{\link{make_long}}
+Si \code{data} es \emph{wide} se puede transformar con \code{electorAr::make_long}
 (\emph{\code{long} format of \code{data} is required for getting results.
-If \code{data} is in \emph{wide} format you can transform it with \code{\link{make_long}}})
+If \code{data} is in \emph{wide} format you can transform it with \code{electorAr::make_long}})
 
-\strong{2.} \code{data} tiene que haber incorporando los nombres de las listas. Agreguelos con \code{\link{get_names}}
-(\emph{\code{data} must have party names. Add them with \code{\link{get_names}}}).
+\strong{2.} \code{data} tiene que haber incorporando los nombres de las listas. Agreguelos con \code{\link[electorAr]{get_names}}
+(\emph{\code{data} must have party names. Add them with \code{\link[electorAr]{get_names}}}).
 
 \strong{3.} \code{data} tiene que haber sido descargada con parámetro \code{level = provincia} con la función
-\code{\link{get_election_data}}
-(\emph{\code{data} must be \code{level = provincia} when downloading it with \code{\link{get_election_data}}}).
+\code{\link[electorAr]{get_election_data}}
+(\emph{\code{data} must be \code{level = provincia} when downloading it with \code{\link[electorAr]{get_election_data}}}).
 }
 \examples{
 
