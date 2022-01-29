@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 Librería auxiliar del `polArverse` que contiene funciones para visualizaciones que permiten explorar radpidamente la variedad de datos del universo político de Argentina: 
 
 
-![](https://raw.githubusercontent.com/PoliticaArgentina/data_warehouse/master/hex/polArViz.png)
+![](https://raw.githubusercontent.com/PoliticaArgentina/data_warehouse/master/hex/polArViz.png){width=30%}
 
 
 ### {electorAr}

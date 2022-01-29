@@ -12,7 +12,7 @@ Librería auxiliar del `polArverse` que contiene funciones para
 visualizaciones que permiten explorar radpidamente la variedad de datos
 del universo político de Argentina:
 
-![](https://raw.githubusercontent.com/PoliticaArgentina/data_warehouse/master/hex/polArViz.png)
+<img src="https://raw.githubusercontent.com/PoliticaArgentina/data_warehouse/master/hex/polArViz.png" style="width:30.0%" />
 
 ### {electorAr}
 
