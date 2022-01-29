@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://politicaargentina.github.io/opinAr//index.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz//index.html</loc>
   </url>
   <url>
-    <loc>https://politicaargentina.github.io/opinAr//reference/map_results.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz//reference/map_results.html</loc>
   </url>
   <url>
-    <loc>https://politicaargentina.github.io/opinAr//reference/pipe.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz//reference/pipe.html</loc>
   </url>
   <url>
-    <loc>https://politicaargentina.github.io/opinAr//reference/plot_bill.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz//reference/plot_bill.html</loc>
   </url>
   <url>
-    <loc>https://politicaargentina.github.io/opinAr//reference/plot_results.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz//reference/plot_results.html</loc>
   </url>
   <url>
-    <loc>https://politicaargentina.github.io/opinAr//reference/plot_speech.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz//reference/plot_speech.html</loc>
   </url>
   <url>
-    <loc>https://politicaargentina.github.io/opinAr//reference/polArViz.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz//reference/polArViz.html</loc>
   </url>
   <url>
-    <loc>https://politicaargentina.github.io/opinAr//reference/tabulate_results.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz//reference/tabulate_results.html</loc>
   </url>
 </urlset>
