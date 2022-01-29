@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# polArViz
+## polArViz  <a><img src="https://raw.githubusercontent.com/PoliticaArgentina/data_warehouse/master/hex/polArViz.png" width="200" align="right" /></a>
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/TuQmano/polArViz/workflows/R-CMD-check/badge.svg)](https://github.com/TuQmano/polArViz/actions)
@@ -22,16 +22,13 @@ knitr::opts_chunk$set(
 Librería auxiliar del `polArverse` que contiene funciones para visualizaciones que permiten explorar radpidamente la variedad de datos del universo político de Argentina: 
 
 
-![](https://raw.githubusercontent.com/PoliticaArgentina/data_warehouse/master/hex/polArViz.png){width=30%}
-
-
 ### {electorAr}
 
 * `plot_results()` devuelve un gráfico con el restulado agregado de una elección determianda (para el flujo de datos obtenidos con el parámetro `source = data`). Automáticamente ajusta el modo de visulización según el nivel de agregación (nacional / provincial / departamental)
 
 * `tabulate_results()` devuelve una tabla con el restulado agregado de una elección determianda (para el flujo de datos obtenidos con el parámetro `source = data`). 
 
-* `map_results()` devuelve una tabla con el restulado  de una elección determianda (para el flujo de datos obtenidos con el parámetro `source = data`). Un mapa de Argentina para elecciones presidenciales, y mapas provinciales para diputados o senadores.
+* `map_results()` devuelve un mapa de Argentina para elecciones presidenciales, y mapas provinciales para diputados o senadores con el restulado de una elección determianda (para el flujo de datos obtenidos con el parámetro `source = data`)
 
 ### {discursAr}
 

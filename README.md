@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# polArViz
+## polArViz <a><img src="https://raw.githubusercontent.com/PoliticaArgentina/data_warehouse/master/hex/polArViz.png" width="200" align="right" /></a>
 
 <!-- badges: start -->
 
@@ -11,8 +11,6 @@
 Librería auxiliar del `polArverse` que contiene funciones para
 visualizaciones que permiten explorar radpidamente la variedad de datos
 del universo político de Argentina:
-
-<img src="https://raw.githubusercontent.com/PoliticaArgentina/data_warehouse/master/hex/polArViz.png" style="width:30.0%" />
 
 ### {electorAr}
 
@@ -26,10 +24,10 @@ del universo político de Argentina:
     una elección determianda (para el flujo de datos obtenidos con el
     parámetro `source = data`).
 
--   `map_results()` devuelve una tabla con el restulado de una elección
-    determianda (para el flujo de datos obtenidos con el parámetro
-    `source = data`). Un mapa de Argentina para elecciones
-    presidenciales, y mapas provinciales para diputados o senadores.
+-   `map_results()` devuelve un mapa de Argentina para elecciones
+    presidenciales, y mapas provinciales para diputados o senadores con
+    el restulado de una elección determianda (para el flujo de datos
+    obtenidos con el parámetro `source = data`)
 
 ### {discursAr}
 
