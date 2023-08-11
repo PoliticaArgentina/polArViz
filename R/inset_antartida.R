@@ -39,7 +39,7 @@ inset_antartida <- function(ggplot_map, mapping = F, capa = 1, crs =  22197,
 
     scales <- ggplot2::ggplot_build(ggplot_map)
 
-    data_color <- dplyr::pull(dplyr::slice_max(scales$data[[capa]], geometry), "fill")
+    data_color <- dplyr::pull(dplyr::slice(dplyr::arrange(scales$data[[capa]], dplyr::desc(geometry)),1), "fill")
 
     antartida_map <- ggplot2::ggplot() +
       ggplot2::geom_sf(data = antartida,
