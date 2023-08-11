@@ -18,7 +18,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">polArViz</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.1.1</span>
       </span>
     </div>
 
@@ -52,7 +52,7 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">plot_results</span><span class="op">(</span><span class="va">data</span>, national <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">plot_results</span><span class="op">(</span><span class="va">data</span>, national <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -62,13 +62,18 @@
 <code>level</code> en <code>provincia</code>
 (<em>tibble saved as an object in the Enviroment after querying <code><a href="https://rdrr.io/pkg/electorAr/man/get_election_data.html" class="external-link">get_election_data</a></code> with <code>provincia</code> as
 <code>level</code> parameter</em>).</p></dd>
+
+
 <dt>national</dt>
 <dd><p>un boleano opcional para graficar elecciones presidenciales sin desagregar
 (<em>an optional boolean to plot presidential elections without disaggregating</em>).</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>Devuelve un objeto de <code>class"gg" "ggplot"</code> que grafica el resultado de una eleccion condicional al nivel de agregacion de data
+    
+
+<p>Devuelve un objeto de <code>class"gg" "ggplot"</code> que grafica el resultado de una eleccion condicional al nivel de agregacion de data
 (<em>Returns an object of <code>class "gg" "ggplot"</code> that plots the election results conditional on the level of <code>data</code> aggregation.</em>).</p>
     </div>
     <div id="details">
@@ -90,8 +95,8 @@ it with <code><a href="https://rdrr.io/pkg/electorAr/man/make_long.html" class="
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"></span>
-<span class="r-in"> <span class="op">(</span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">electorAr</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/electorAr/man/tucuman_dip_gral_2017.html" class="external-link">tucuman_dip_gral_2017</a></span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+<span class="r-in"><span> <span class="op">(</span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">electorAr</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/electorAr/man/tucuman_dip_gral_2017.html" class="external-link">tucuman_dip_gral_2017</a></span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 6 × 8</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># Groups:   codprov [1]</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   category round  year codprov name_prov electores listas   votos</span>
@@ -102,13 +107,13 @@ it with <code><a href="https://rdrr.io/pkg/electorAr/man/make_long.html" class="
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> dip      gral   <span style="text-decoration: underline;">2</span>017 23      TUCUMAN     1<span style="text-decoration: underline;">217</span>274 0548    <span style="text-decoration: underline;">459</span>257</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> dip      gral   <span style="text-decoration: underline;">2</span>017 23      TUCUMAN     1<span style="text-decoration: underline;">217</span>274 blancos   <span style="text-decoration: underline;">5</span>920</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> dip      gral   <span style="text-decoration: underline;">2</span>017 23      TUCUMAN     1<span style="text-decoration: underline;">217</span>274 nulos    <span style="text-decoration: underline;">12</span>947</span>
-<span class="r-in"></span>
-<span class="r-in"></span>
-<span class="r-in"> <span class="va">data</span> <span class="op"><a href="pipe.html">%&gt;%</a></span></span>
-<span class="r-in">       <span class="fu">electorAr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/electorAr/man/get_names.html" class="external-link">get_names</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="pipe.html">%&gt;%</a></span></span>
-<span class="r-in">       <span class="fu">plot_results</span><span class="op">(</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span> <span class="va">data</span> <span class="op"><a href="pipe.html">%&gt;%</a></span></span></span>
+<span class="r-in"><span>       <span class="fu">electorAr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/electorAr/man/get_names.html" class="external-link">get_names</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="pipe.html">%&gt;%</a></span></span></span>
+<span class="r-in"><span>       <span class="fu">plot_results</span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="plot_results-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -123,7 +128,7 @@ it with <code><a href="https://rdrr.io/pkg/electorAr/man/make_long.html" class="
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>
