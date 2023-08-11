@@ -39,7 +39,14 @@ del universo político de Argentina:
 -   `plot_bill()` grafica el resultado de la votación de una ley en una
     cámara legislativa.
 
-## Instalatción
+### {geoAr}
+
+-   `inset_caba()` agrega un zoom de CABA a un mapa de Argentina.
+
+-   `inset_antartida()` agrega Antártida e Islas del Atlántico Sur a un
+    mapa de Argentina.
+
+## Instalación
 
 Se puede instalar la versión en desarrollo desde **Github**:
 
