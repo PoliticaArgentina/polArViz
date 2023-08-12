@@ -1,0 +1,32 @@
+url: https://politicaargentina.github.io/polArViz/
+template:
+  params:
+    bootswatch: cerulean
+home:
+  strip_header: true
+authors:
+  Juan Pablo Ruiz Nicolini:
+    href: https://tuqmano.ar
+reference:
+- title: {electorAr}
+  desc: Tabls, gráficos y mapas para datos electorales
+  contents:
+   - contains("results")
+- title: {discursAr}
+  desc: Viz exploratoria de discursos presidenciales
+  subtile: Wordcloud
+  contents:
+   - contains("speech")
+- title: {legislAr}
+  desc: Viz votaciones legislativas en Congreso de Argentina
+  contents:
+   - contains("bill")
+- title: {geoAr}
+  desc: Inserción de geometrías en mapas de Argentina
+  subtile: CABA y Antartida
+  contents:
+   - contains("inset")
+- title: Other
+  desc:
+  contents:
+  - 'polArViz'

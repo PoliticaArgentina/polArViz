@@ -49,5 +49,6 @@ Suggests:
     knitr
 Depends: 
     R (>= 2.10)
-URL: https://github.com/PoliticaArgentina/polArViz
+URL: https://github.com/PoliticaArgentina/polArViz,
+    https://politicaargentina.github.io/polArViz/
 BugReports: https://github.com/PoliticaArgentina/polArViz/issues
