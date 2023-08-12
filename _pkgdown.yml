@@ -8,20 +8,20 @@ authors:
   Juan Pablo Ruiz Nicolini:
     href: https://tuqmano.ar
 reference:
-- title: {electorAr}
+- title: electorAr
   desc: Table, plots and maps for electoral data
   contents:
   - contains("results")
-- title: {discursAr}
+- title: discursAr
   desc: Presidential speeches exploratory viz
 - subtile: Wordcloud
   contents:
   - contains("speech")
-- title: {legislAr}
+- title: legislAr
   desc: Legislatives bills data viz
   contents:
   - contains("bill")
-- title: {geoAr}
+- title: geoAr
   desc: Inset maps for ggplot objects
 - subtile: CABA y Antartida
   contents:
