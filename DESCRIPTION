@@ -1,18 +1,22 @@
 Package: polArViz
 Title: Vizualization Functions for the polAr Universe
-Version: 0.0.1.0
+Version: 0.0.1.1
 Authors@R: 
-    person(given = "Juan Pablo",
+    c(person(given = "Juan Pablo",
            family = "Ruiz Nicolini",
            role = c("aut", "cre", "cph"),
            email = "juanpabloruiznicolini@gmail.com",
-           comment = c(ORCID = "0000-0002-3138-6343"))
+           comment = c(ORCID = "0000-0002-3138-6343")),
+    person(given = "Elian",
+           family = "Soutullo",
+           role = "ctb",
+           email = "eliansoutul@gmail.com"))
 Description: This package provides a set of functions for a quick visual exploration of Argentina´s political data. .
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.3
 Imports: 
     assertthat,
     attempt,
@@ -29,7 +33,6 @@ Imports:
     ggthemes,
     glue,
     gt,
-    httr,
     legislAr,
     magrittr,
     purrr,
@@ -38,13 +41,12 @@ Imports:
     sf,
     stringr,
     tibble,
-    wordcloud2
+    wordcloud2,
+    ggmapinset
 Remotes: 
     PoliticaArgentina/geoAr,
     PoliticaArgentina/legislAr,
-    PoliticaArgentina/electorAr,
-    PoliticaArgentina/opinAr,
-    PoliticaArgentina/discursAr
+    PoliticaArgentina/electorAr
 Suggests:
     knitr
 Depends: 
