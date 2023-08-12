@@ -1,48 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/404.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz/404.html</loc>
   </url>
   <url>
-    <loc>/LICENSE-text.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>/LICENSE.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz/LICENSE.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz/authors.html</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz/index.html</loc>
   </url>
   <url>
-    <loc>/reference/index.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz/news/index.html</loc>
   </url>
   <url>
-    <loc>/reference/inset_antartida.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz/reference/index.html</loc>
   </url>
   <url>
-    <loc>/reference/inset_caba.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz/reference/inset_antartida.html</loc>
   </url>
   <url>
-    <loc>/reference/map_results.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz/reference/inset_caba.html</loc>
   </url>
   <url>
-    <loc>/reference/pipe.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz/reference/map_results.html</loc>
   </url>
   <url>
-    <loc>/reference/plot_bill.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz/reference/pipe.html</loc>
   </url>
   <url>
-    <loc>/reference/plot_results.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz/reference/plot_bill.html</loc>
   </url>
   <url>
-    <loc>/reference/plot_speech.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz/reference/plot_results.html</loc>
   </url>
   <url>
-    <loc>/reference/polArViz.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz/reference/plot_speech.html</loc>
   </url>
   <url>
-    <loc>/reference/tabulate_results.html</loc>
+    <loc>https://politicaargentina.github.io/polArViz/reference/polArViz.html</loc>
+  </url>
+  <url>
+    <loc>https://politicaargentina.github.io/polArViz/reference/tabulate_results.html</loc>
   </url>
 </urlset>

@@ -2,5 +2,8 @@ pandoc: 2.19.2
 pkgdown: 2.0.7
 pkgdown_sha: ~
 articles: {}
-last_built: 2023-08-11T22:26Z
+last_built: 2023-08-12T18:56Z
+urls:
+  reference: https://politicaargentina.github.io/polArViz/reference
+  article: https://politicaargentina.github.io/polArViz/articles
 
