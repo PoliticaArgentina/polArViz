@@ -41,4 +41,6 @@ if(getRversion() >= "2.15.1")  utils::globalVariables(
     "y",
     "year",
     "geometry",
-    "codprov_censo"))
+    "codprov_censo",
+    'fecha',
+    'icg'))

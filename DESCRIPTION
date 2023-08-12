@@ -42,11 +42,14 @@ Imports:
     stringr,
     tibble,
     wordcloud2,
-    ggmapinset
+    ggmapinset, 
+    opinAr,
+    lubridate
 Remotes: 
     PoliticaArgentina/geoAr,
     PoliticaArgentina/legislAr,
-    PoliticaArgentina/electorAr
+    PoliticaArgentina/electorAr, 
+    PoliticaArgentina/opinAr
 Suggests:
     knitr
 Depends: 
