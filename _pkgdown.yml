@@ -9,20 +9,20 @@ authors:
     href: https://tuqmano.ar
 reference:
 - title: {electorAr}
-  desc: Tabls, gráficos y mapas para datos electorales
+  desc: Table, plots and maps for electoral data
   contents:
    - contains("results")
 - title: {discursAr}
-  desc: Viz exploratoria de discursos presidenciales
+  desc: Presidential speeches exploratory viz
   subtile: Wordcloud
   contents:
    - contains("speech")
 - title: {legislAr}
-  desc: Viz votaciones legislativas en Congreso de Argentina
+  desc: Legislatives bills data viz
   contents:
    - contains("bill")
 - title: {geoAr}
-  desc: Inserción de geometrías en mapas de Argentina
+  desc: Inset maps for ggplot objects
   subtile: CABA y Antartida
   contents:
    - contains("inset")
