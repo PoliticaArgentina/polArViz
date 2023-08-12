@@ -9,7 +9,7 @@ Authors@R:
            comment = c(ORCID = "0000-0002-3138-6343")),
     person(given = "Elian",
            family = "Soutullo",
-           role = "ctb",
+           role = "aut",
            email = "eliansoutul@gmail.com"))
 Description: This package provides a set of functions for a quick visual exploration of Argentina´s political data. .
 License: MIT + file LICENSE
