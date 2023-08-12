@@ -11,21 +11,21 @@ reference:
 - title: {electorAr}
   desc: Table, plots and maps for electoral data
   contents:
-   - contains("results")
+  - contains("results")
 - title: {discursAr}
   desc: Presidential speeches exploratory viz
-  subtile: Wordcloud
+- subtile: Wordcloud
   contents:
-   - contains("speech")
+  - contains("speech")
 - title: {legislAr}
   desc: Legislatives bills data viz
   contents:
-   - contains("bill")
+  - contains("bill")
 - title: {geoAr}
   desc: Inset maps for ggplot objects
-  subtile: CABA y Antartida
+- subtile: CABA y Antartida
   contents:
-   - contains("inset")
+  - contains("inset")
 - title: Other
   desc:
   contents:
