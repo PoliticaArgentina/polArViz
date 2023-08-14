@@ -26,6 +26,10 @@ reference:
 - subtile: CABA y Antartida
   contents:
   - contains("inset")
+- title: polArViz
+  desc: Viz public opinion data serie
+  contents:
+  - contains("icg")
 - title: Other
   desc:
   contents:

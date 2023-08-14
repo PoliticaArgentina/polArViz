@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/TuQmano/polArViz/workflows/R-CMD-check/badge.svg)](https://github.com/TuQmano/polArViz/actions)
+[![R-CMD-check](https://github.com/PoliticaArgentina/polArViz/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/PoliticaArgentina/polArViz/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Librería auxiliar del `polArverse` que contiene funciones para visualizaciones que permiten explorar radpidamente la variedad de datos del universo político de Argentina: 
